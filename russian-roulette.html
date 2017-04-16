@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrays</title>
+</head>
+<body>
+  <script>
+// I made a game called Russian Roulette. You pick the number of a chamber and if it has bullet inside (means "1" from array) then it says that you are dead. If no (0 from array is an empty chamber) then try your luck again. PS: didn't get time to make it look nice :((
+
+var chamber = [0,0,0,1,0,0];
+chamber.sort(function(a, b){
+    return 0.5 - Math.random();
+  });
+console.log(chamber);
+var chamberIndex = parseFloat(prompt("plese enter number from 0 to 5"));
+console.log(chamberIndex);
+
+
+var bullet = chamber.indexOf(1);
+ console.log(bullet);
+
+  for ( var i = 0; i<=chamber.length; i++ ){
+    if (bullet === chamberIndex){
+      alert("Done, you are GONE!");
+      break;
+    } else {
+      alert("try again")
+      break;
+    }
+  }
+
+
+  </script>
+</body>
+</html>
